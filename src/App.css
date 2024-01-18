@@ -1,0 +1,53 @@
+*{
+    font-family: roboto, sans-serif;
+}
+.inscription {
+    background-image: url(../src/images/background.jpg);
+    width: 100% !important;
+    height: 100vh !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sidebar {
+    background-image: url(../src/images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.inscription .form-control{
+ border: none !important;
+ border-radius: none !important;
+ border-bottom: 1px solid gray !important;
+}
+.gris{
+ background: #474A4D !important;
+ color: #fff !important; 
+}
+.gris:hover{
+ background: #0cbbb2!important;
+ color: #fff!important; 
+}
+.inscription form-control:focus{
+    outline: none !important;
+}
+.navbar .form-control:focus{
+    outline: none;
+}
+.bas{
+    padding-top: 15vh;
+}
+.sidebar .bas{
+    padding-top: 6vh;
+}
+.reduire{
+    padding-top: 9vh;
+}
+.logo{
+    width: 40px;
+}
+.sidebar .profil{
+    padding-top: 40vh;
+}
+.avatar{
+    width: 30vh;
+}
