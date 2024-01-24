@@ -1,7 +1,28 @@
 import React from "react";
 import logo from "../images/logo .png";
 import {Link} from 'react-router-dom';
+
 function Connexion() {
+ 
+  //  const [email, setEmail] = useState();
+  //  const [password, setPassword] = useState();
+  //  const navigate = useNavigate();
+  //  const handleSubmit = (e) => {
+  //    e.preventDefault();
+  //    axios
+  //      .post(
+  //        "mongodb+srv://jahreuf:Djilo13dia@app-test.1kg1yqb.mongodb.net/connexion",
+  //        {
+  //          email,
+  //          password,
+  //        }
+  //      )
+  //      .then((result) => {
+  //        console.log(result);
+  //        navigate("/admin/Dashboard");
+  //      })
+  //      .catch((err) => console.log(err));
+  //  };
   return (
     <div className="inscription ">
       <div className="bas">
@@ -36,13 +57,20 @@ function Connexion() {
                   Accepter les termes et la politique
                 </label>
               </div>
-              <button Link to='/Dashboard' type="submit" className="btn gris w-100">
-                Se connecter
-              </button>
+              <Link to="/admin/Dashboard">
+                <button type="submit" className="btn gris w-100">
+                  Se connecter
+                </button>
+              </Link>
             </form>
             <p className="text-center text-white mt-3">
               Vous n'avaez pas de compte?
-              <Link to="/inscription" className="text-decoration-none text-warning">Inscrivez-vous ici</Link>
+              <Link
+                to="/inscription"
+                className="text-decoration-none text-warning"
+              >
+                Inscrivez-vous ici
+              </Link>
             </p>
           </div>
         </div>

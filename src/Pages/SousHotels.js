@@ -1,22 +1,16 @@
 import React from 'react'
 
-function SousHotels() {
+function SousHotels({title, image, lieu, count}) {
   return (
-    <div>
-      <div className="stat-card px-4 col-3 flex-wrap card my-3">
-        <div className="d-flex align-items-center justify-content-center">
-          <div className="ronde  p-3  d-flex justify-content-center me-4">
-            <p className=" fs-4 icon text-dark">{icon}</p>
-          </div>
-          <div className="">
-            <div className="d-flex">
-              <h3 className="mx-2">{title}</h3>
-              <p className="mt-2">{count}</p>
-            </div>
-            <p>Je ne sais pas quoi mettre</p>
-          </div>
-        </div>
-      </div>
+    <div className='col-md-3 mt-5 '>
+      <div class="card border-0 shadow-sm">
+     <img src={image} class="img-fluid" alt="..."/>
+  <div class="card-body">
+  <p className='dsd'>{lieu}</p>
+    <h5 class="card-title">{title}</h5>
+    <p class="card-text">{count}</p>
+  </div>
+</div>
     </div>
   );
 }

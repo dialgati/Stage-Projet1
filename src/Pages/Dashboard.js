@@ -5,10 +5,10 @@ import Sidebar from '../navSide/Sidebar'
 function Dashboard() {
   return (
     <div>
-    <Navbar />
-    <Sidebar />
+      <Navbar />
+      <Sidebar />
     </div>
-  )
+  );
 }
 
 export default Dashboard;
