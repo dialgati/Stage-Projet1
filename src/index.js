@@ -23,7 +23,7 @@ const route = createBrowserRouter([
     element: <Inscription />,
   },
   {
-    path: "/connexion",
+    path: "/",
     element: <App />,
     children: [
       {
