@@ -3,16 +3,15 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
 import {
   RouterProvider,
   createBrowserRouter,
 } from "react-router-dom";
 import Connexion from "./connect/connexion";
-import Inscription from "./connect/inscription";
 import App from "./App";
 import Dashboard from "./Pages/Dashboard";
 import Hotels from "./Pages/Hotels";
+import Inscription from "./connect/inscription";
 
 const route = createBrowserRouter([
   {

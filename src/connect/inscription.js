@@ -1,4 +1,7 @@
 import React from "react";
+import logo from '../images/logo .png'
+import { Link } from "react-router-dom";
+
 function Inscription() {
   return (
     <div className="inscription ">
@@ -10,15 +13,13 @@ function Inscription() {
           <div className="row justify-content-center">
             <form
               className="col-md-6 mt-4 bg-white center shadow-3 p-3 rounded-1"
-              onSubmit={handleSubmit}
             >
               <h5 className="mb-3">Inscrivez en tant que admin</h5>
               <div className="mb-5">
                 <input
                   type="text"
                   className="form-control border-0"
-                  placeholder="Nom"
-                  onChange={(e) => setName(e.target.value)}
+                placeholder="Nom"
                 />
               </div>
               <div className="mb-5">
@@ -26,7 +27,6 @@ function Inscription() {
                   type="email"
                   className="form-control border-0"
                   placeholder="E-mail"
-                  onChange={(e) => setEmail(e.target.value)}
                   
                 />
               </div>
@@ -35,7 +35,6 @@ function Inscription() {
                   type="password"
                   className="form-control border-0"
                   placeholder="Mot de passe"
-                  onChange={(e) => setPassword(e.target.value)}
                 
                 />
               </div>
