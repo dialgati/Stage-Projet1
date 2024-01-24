@@ -36,16 +36,18 @@
 .sidebar-masque{
     display: none;
 }
-.navbar{
-    width: 100%;
-}
+   .navbar{
+    position: sticky;
+   }
 .template {
     display: flex;
     justify-content: center;
 }
-/* .contentNavbar{
-  display: none;
-} */
+.contentNavbar{
+    background: #F0F0F0 !important;
+    height: 1000px !important;
+}
+
 
  }
 .inscription .form-control{
@@ -90,7 +92,6 @@
     border: 1px dashed rgba(128, 128, 128, 0.596);
 }
 .contentNavbar{
-    width: 100%;
     background: #F0F0F0 !important;
-    height: 800px !important;
+    height: 150vh !important;
 }

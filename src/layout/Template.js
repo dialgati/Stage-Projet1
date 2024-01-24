@@ -9,7 +9,7 @@ function Template(props) {
           {props.sidebar}
         </div>
 
-        <div className="col-10   col-md-2 "></div>
+        <div className="col-12 m-0  col-md-2 "></div>
         <div className="col-10 contentNavbar  p-0 m-0">
           <div className="sticky-top">{props.navbar}</div>
           {props.children}

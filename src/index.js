@@ -15,7 +15,7 @@ import Inscription from "./connect/inscription";
 
 const route = createBrowserRouter([
   {
-    path: "/",
+    path: "/connexion",
     element: <Connexion />,
   },
   {
