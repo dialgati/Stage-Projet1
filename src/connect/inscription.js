@@ -1,30 +1,5 @@
-import {useState}from 'react'
-import logo from '../images/logo .png';
-import {Link} from 'react-router-dom';
-import axios from 'axios'
-import { useNavigate } from 'react-router-dom';
+import React from "react";
 function Inscription() {
-
-   const [name, setName] = useState();
-   const [email, setEmail] = useState();
-   const [password, setPassword] = useState();
-   const navigate = useNavigate ()
-  const handleSubmit = (e) => {
-    e.preventDefault()
-axios.post(
-    "mongodb+srv://jahreuf:Djilo13dia@app-test.1kg1yqb.mongodb.net/register",
-    {
-      name,
-      email,
-      password,
-    }
-  )
-  .then((result) => 
-    console.log(result)
-  )
-  .catch((err) => console.log(err));
-
-  }
   return (
     <div className="inscription ">
       <div className="reduire">
@@ -92,3 +67,23 @@ axios.post(
 }
 
 export default Inscription;
+
+//    const [name, setName] = useState();
+//    const [email, setEmail] = useState();
+//    const [password, setPassword] = useState();
+//    const navigate = useNavigate ()
+//   const handleSubmit = (e) => {
+//     e.preventDefault()
+// axios.post(
+//     "mongodb+srv://jahreuf:Djilo13dia@app-test.1kg1yqb.mongodb.net/register",
+//     {
+//       name,
+//       email,
+//       password,
+//     }
+//   )
+//   .then((result) => 
+//     console.log(result)
+//   )
+//   .catch((err) => console.log(err));
+

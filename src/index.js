@@ -8,8 +8,8 @@ import {
   RouterProvider,
   createBrowserRouter,
 } from "react-router-dom";
-import Connexion from './connect/Connexion'
-import Inscription from "./connect/Inscription";
+import Connexion from "./connect/connexion";
+import Inscription from "./connect/inscription";
 import App from "./App";
 import Dashboard from "./Pages/Dashboard";
 import Hotels from "./Pages/Hotels";
