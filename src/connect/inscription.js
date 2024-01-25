@@ -1,8 +1,37 @@
-import React from "react";
+import {useState} from "react";
 import logo from '../images/logo .png'
-import { Link } from "react-router-dom";
+import axios from 'axios';
+import { Link, useNavigate} from "react-router-dom";
 
 function Inscription() {
+  const [data, setData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+  });
+  const [error, setError] = useState("")
+  const navigate = useNavigate();
+  const handleChange = ({ currentTarget:input}) => {
+    setData({...data, [input.name]:input.value});
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try{
+      const url =
+        "http://localhost:8080/api/users";
+      const {data:res} = await axios.post(url, data);
+      navigate("/connexion")
+      console.log(res.message);
+    } catch(error){
+      if(error.response &&
+         error.response.status >= 400 &&
+         error.response.status <= 500
+         ){
+          setError(error.reponse.data.message)
+         }
+    }
+  }
   return (
     <div className="inscription ">
       <div className="reduire">
@@ -13,29 +42,51 @@ function Inscription() {
           <div className="row justify-content-center">
             <form
               className="col-md-6 mt-4 bg-white center shadow-3 p-3 rounded-1"
+              onSubmit={handleSubmit}
             >
               <h5 className="mb-3">Inscrivez en tant que admin</h5>
-              <div className="mb-5">
+              <div className="mb-3">
                 <input
                   type="text"
+                  name="firstName"
+                  required
+                  onChange={handleChange}
+                  value={data.firstName}
                   className="form-control border-0"
-                placeholder="Nom"
+                  placeholder="First Name"
                 />
               </div>
-              <div className="mb-5">
+              <div className="mb-3">
+                <input
+                  type="text"
+                  name="lastName"
+                  required
+                  onChange={handleChange}
+                  value={data.lastName}
+                  className="form-control border-0"
+                  placeholder="Last Name"
+                />
+              </div>
+              <div className="mb-3">
                 <input
                   type="email"
+                  name="email"
+                  required
+                  onChange={handleChange}
+                  value={data.email}
                   className="form-control border-0"
-                  placeholder="E-mail"
-                  
+                  placeholder="Email"
                 />
               </div>
-              <div className="mb-5">
+              <div className="mb-3">
                 <input
                   type="password"
+                  name="password"
+                  required
+                  onChange={handleChange}
+                  value={data.password}
                   className="form-control border-0"
-                  placeholder="Mot de passe"
-                
+                  placeholder="Password"
                 />
               </div>
               <div className="mb-3 form-check">
@@ -44,10 +95,10 @@ function Inscription() {
                   Accepter les termes et la politique
                 </label>
               </div>
-              
-                <button type="submit" className="btn gris w-100">
-                  S'inscrire
-                </button>
+              {error && <div className="text-danger">{error}</div>}
+              <button type="submit" className="btn gris w-100">
+                S'inscrire
+              </button>
             </form>
             <p className="text-center text-white mt-3">
               Vous avaez déjà un compte?
